@@ -1,0 +1,11 @@
+Midnight Commander for ASUSTOR NAS - Changelog
+
+Version 4.8.31-1 (2026-06-09)
+-----------------------------
+* Initial release of Midnight Commander for ASUSTOR NAS
+* Includes Midnight Commander 4.8.31
+* Built with ncurses support for terminal-based UI
+* Provides visual file manager for ASUSTOR NAS
+* Includes mcedit (built-in editor) and mcview (file viewer)
+* Archive support for common formats
+* Configured without X11 and GPM for embedded systems

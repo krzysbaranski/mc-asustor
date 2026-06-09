@@ -1,0 +1,13 @@
+Midnight Commander is a visual file manager for UNIX-like systems. It is a Norton Commander clone, but works on many Unix-like systems.
+
+Features:
+- Visual two-panel file manager
+- Comprehensive file operations (copy, move, delete, etc.)
+- Built-in text editor (mcedit)
+- File viewer (mcview)
+- Archive support (zip, tar, gzip, bzip2, etc.)
+- FTP and SSH support
+- Syntax highlighting
+- User-friendly keyboard shortcuts
+
+This package provides the mc command-line file manager for your ASUSTOR NAS.

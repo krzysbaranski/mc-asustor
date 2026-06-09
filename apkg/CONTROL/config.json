@@ -1,0 +1,27 @@
+{
+  "general": {
+    "package": "mc",
+    "name": "Midnight Commander",
+    "version": "4.8.31-1",
+    "depends": [],
+    "conflicts": [],
+    "developer": "Free Software Foundation",
+    "maintainer": "krzysbaranski",
+    "email": "",
+    "website": "https://midnight-commander.org/",
+    "architecture": "x86-64",
+    "firmware": "5.1",
+    "description": "Midnight Commander - a visual file manager for UNIX-like systems",
+    "license": "GPL-2.0"
+  },
+  "register": {
+    "symbolic-link": {
+      "/bin": [
+        "mc",
+        "mcedit",
+        "mcview"
+      ],
+      "/lib": []
+    }
+  }
+}
