@@ -4,7 +4,7 @@ set -e
 # Build script for Midnight Commander and dependencies for ASUSTOR NAS
 # This script downloads, compiles, and packages Midnight Commander
 
-MC_VERSION="4.8.31"
+MC_VERSION="4.6.1"
 
 # Build configuration
 # PREFIX: Path used during build/staging (can be any path for development)

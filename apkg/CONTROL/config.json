@@ -2,7 +2,7 @@
   "general": {
     "package": "mc",
     "name": "Midnight Commander",
-    "version": "4.8.31-1",
+    "version": "4.6.1-1",
     "depends": [],
     "conflicts": [],
     "developer": "Free Software Foundation",
@@ -19,6 +19,7 @@
       "/bin": [
         "mc",
         "mcedit",
+        "mcmfmt",
         "mcview"
       ],
       "/lib": []
