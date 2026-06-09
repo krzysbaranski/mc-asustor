@@ -29,7 +29,10 @@ jobs:
             make \
             texinfo \
             libncurses5-dev \
-            libslang2-dev
+            libslang2-dev \
+            libglib2.0-dev \
+            pkg-config \
+            jq
 
       - name: Build Midnight Commander
         run: |
