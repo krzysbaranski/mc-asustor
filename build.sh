@@ -61,7 +61,9 @@ LDFLAGS="-L${STAGING_DIR}${PREFIX}/lib -Wl,-rpath,${INSTALL_PREFIX}/lib" \
     --enable-background \
     --disable-debug \
     --without-gpm \
-    --without-x
+    --without-x \
+    CPPFLAGS="-I/usr/include" \
+    LDFLAGS="-L/usr/lib/x86_64-linux-gnu -L${STAGING_DIR}${PREFIX}/lib -Wl,-rpath,${INSTALL_PREFIX}/lib"
 
 make -j$(nproc)
 make install DESTDIR="${STAGING_DIR}"

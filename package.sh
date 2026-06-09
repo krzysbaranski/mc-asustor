@@ -27,6 +27,15 @@ find "${PACKAGE_DIR}" -mindepth 1 -maxdepth 1 -type d ! -name "CONTROL" -exec rm
 echo "Step 2: Copying files from staging to package..."
 cp -a "${STAGING_DIR}${PREFIX}/"* "${PACKAGE_DIR}/" 2>/dev/null || true
 
+# Copy required system libraries
+echo "Step 3: Copying required system libraries..."
+mkdir -p "${PACKAGE_DIR}/lib"
+for lib in libncurses.so.6 libncurses.so libtinfo.so.6 libtinfo.so; do
+  if [ -f /usr/lib/x86_64-linux-gnu/$lib ]; then
+    cp /usr/lib/x86_64-linux-gnu/$lib "${PACKAGE_DIR}/lib/" 2>/dev/null || true
+  fi
+done
+
 echo ""
 echo "================================================"
 echo "Package preparation completed successfully!"
@@ -34,5 +43,5 @@ echo "================================================"
 echo ""
 echo "Package structure:"
 echo "  bin/: $(find "${PACKAGE_DIR}/bin" \( -type f -o -type l \) 2>/dev/null | wc -l) files"
-echo "  lib/: $(find "${PACKAGE_DIR}/lib" \( -type f -o -type l \) 2>/dev/null | wc -l) files"
+echo "  lib/: $(find "${PACKAGE_DIR}/lib" \( -type f -o -type l \) 2>/dev/null | wc -l) files (includes libncurses)"
 echo "  share/: $(find "${PACKAGE_DIR}/share" \( -type f -o -type l \) 2>/dev/null | wc -l) files"
